@@ -1,0 +1,4 @@
+include ':noAIDL'
+include ':withAIDL'
+include ':app'
+rootProject.name = "TheBinder"

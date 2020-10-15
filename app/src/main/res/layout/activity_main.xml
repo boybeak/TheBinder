@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/withAIDL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onWithAIDL"
+        android:text="withAIDL"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/noAIDL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onNoAIDL"
+        android:text="noAIDL"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sayHiWithAIDL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sayHiWithAIDL"
+        android:text="sayHiWithAIDL"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sayHiNoAIDL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sayHiNoAIDL"
+        android:text="sayHiNoAIDL"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
