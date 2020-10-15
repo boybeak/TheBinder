@@ -6,7 +6,10 @@
         <service
             android:name=".NoAIDLService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true"
+            android:process=":noAIDL"
+            />
+            <!--android:process=":noAIDL"-->
     </application>
 
 </manifest>

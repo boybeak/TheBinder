@@ -4,11 +4,13 @@ import android.os.Binder
 import android.os.IBinder
 import android.os.IInterface
 import android.os.Parcel
+import android.util.Log
 
 interface INoAIDL : IInterface {
     fun sayHi(name: String)
 
     companion object {
+        private val TAG = INoAIDL::class.java.simpleName
         private val DESCRIPTOR = INoAIDL::class.java.name
 
         abstract class Stub : Binder(), INoAIDL {
@@ -22,10 +24,16 @@ interface INoAIDL : IInterface {
                     }
                     val iin = binder.queryLocalInterface(DESCRIPTOR)
                     if (iin != null && iin is INoAIDL) {
+                        Log.v(TAG, "asInterface find binder")
                         return iin
                     }
+                    Log.v(TAG, "asInterface has to new proxy")
                     return Proxy(binder)
                 }
+            }
+
+            init {
+                attachInterface(this, DESCRIPTOR)
             }
 
             override fun onTransact(code: Int, data: Parcel, reply: Parcel?, flags: Int): Boolean {
